@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saku beaUty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>SAKU BEAUTY</h1>
+        <nav class="navigation">
+            <button class="nav-link active" data-page="home">Home</button>
+            <button class="nav-link" data-page="products">Products</button>
+            <button class="nav-link" data-page="about">About</button>
+            <section class="hero page-section active" data-page-section="home" id="home"></section>
+            <section class="products-section page-section" data-page-section="products" id="products"></section>
+            <section class="about page-section" data-page-section="about" id="about"></section>
+       </nav>
+        <button id="cartButton" class="cart-button">
+          🛍 Cart <span id="cartCount">0</span>
+        </button>
+    </header>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+           <h2>My Shopping Bag</h2>
+           <button id="closeCart">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            Your cart is empty.
+        </div>
+
+        <div class="cart-footer">
+            <h3>Total: $<span id="cartTotal">0.00</span></h3>
+
+            <button id="checkoutButton">
+                Checkout
+            </button>
+        </div>
+
+    </aside>
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+    >
+    <div id="productList" class=""product-list>
+        Loading products...
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
